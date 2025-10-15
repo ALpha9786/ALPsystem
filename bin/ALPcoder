@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+file="$1"
+if [[ -z "$file" ]]; then
+    echo "Usage: ALPcoder <file.alp|file.alppp>"
+    exit 1
+fi
+
+# Create file if it doesn't exist
+if [[ ! -f "$file" ]]; then
+    touch "$file"
+fi
+
+# Open file with nano (syntax highlighting comes from nanorc)
+nano "$file"

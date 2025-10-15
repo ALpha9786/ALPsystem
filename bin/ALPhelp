@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# ALPhelp — Display all ALPsystem commands and their usage
+
+cat <<'EOT'
+📖 ALPsystem — Command Reference
+───────────────────────────────────────────────
+alpc <file.alp|file.alppp>
+    → Compile and run .alp (C) or .alppp (C++) files
+
+ALPcoder <file.alp|file.alppp>
+    → Open source file in nano with syntax highlighting
+
+ALPrun <file.alp|file.alppp>
+    → Run the already compiled .out file (no recompile)
+
+ALPcheck [--version | -v]
+    → Show ALPsystem version
+ALPcheck [--update | -u]
+    → (Optional) Update scripts manually
+
+ALPdelete
+    → Uninstall ALPsystem from your system
+
+ALPhelp
+    → Show this help message with all commands
+
+───────────────────────────────────────────────
+💡 Tips:
+- Use `.alp` for C and `.alppp` for C++
+- Run `dos2unix <file>` if you copied files from Windows
+- Use `hash -r` if commands don't refresh after editing
+───────────────────────────────────────────────
+EOT

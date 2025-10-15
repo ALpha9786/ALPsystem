@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+VERSION="1.0.1"
+case "$1" in
+    -v|--version)
+        echo "ALPsystem version $VERSION"
+        ;;
+    -u|--update)
+        echo "No remote repo — manual update only."
+        ;;
+    *)
+        echo "Usage: ALPcheck [--version|-v] [--update|-u]"
+        ;;
+esac

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "🧹 Cleaning ALP build files..."
+find . -type f -name "*.out" -delete
+echo "✅ Cleaned all .out files."

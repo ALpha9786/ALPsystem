@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+file="$1"
+if [[ -z "$file" ]]; then
+    echo "Usage: alpc <file.alp|file.alppp>"
+    exit 1
+fi
+
+if [[ ! -f "$file" ]]; then
+    echo "Error: file not found: $file"
+    exit 1
+fi
+
+base="${file%.*}"
+ext="${file##*.}"
+
+if [[ "$ext" == "alp" ]]; then
+    gcc -x c "$file" -o "${base}.out" && echo "✅ Compiled ${base}.out" && ./"${base}.out"
+elif [[ "$ext" == "alppp" ]]; then
+    g++ -x c++ "$file" -o "${base}.out" && echo "✅ Compiled ${base}.out" && ./"${base}.out"
+else
+    echo "Unsupported file extension: .$ext"
+    exit 1
+fi
+

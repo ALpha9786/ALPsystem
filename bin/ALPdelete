@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo "Deleting ALPsystem..."
+rm -rf ~/ALPsystem
+sed -i '/ALPsystem\/bin/d' ~/.bashrc
+echo "✅ ALPsystem removed."
